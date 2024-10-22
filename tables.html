@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Tables</title>
+  <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">Weather App</div>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="tables.html">Tables</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Search Bar and User Profile -->
+      <div class="header">
+        <input type="text" id="city-input" placeholder="Enter City Name">
+        <div class="user-profile">
+          <img src="user-icon.png" alt="User Profile" />
+        </div>
+      </div>
+
+      <!-- Weather Data Table -->
+      <div class="table-section">
+        <h2>Weather Forecast Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Temperature</th>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody id="weather-table-body">
+            <!-- Weather data rows will be inserted dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chatbot Section -->
+      <div class="chatbot-section">
+        <h3>Chatbot</h3>
+        <div class="chatbot-box">
+          <div id="chat-output"></div>
+          <input type="text" id="chat-input" placeholder="Ask something...">
+          <button id="chat-submit-btn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="table.js"></script>
+</body>
+</html>

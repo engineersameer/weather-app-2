@@ -1,0 +1,343 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 220px;
+    background-color: #1a1a2e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e94560;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #16213e;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ff5f7e;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Weather Info Section */
+.weather-info {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: background 0.3s;
+}
+
+.weather-summary {
+    max-width: 60%;
+}
+
+.weather-summary h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.weather-summary p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.weather-icon img {
+    height: 150px;
+    width: 150px;
+}
+
+/* Forecast Section */
+#forecast {
+    margin-bottom: 30px;
+}
+
+#forecast h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #e94560;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px 10px;
+    font-size: 1rem;
+}
+
+tbody td {
+    padding: 12px 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #f7f7f7;
+}
+
+/* Charts Section */
+#charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Container Styling for Charts */
+.chart-container {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width to prevent overflow */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Charts */
+@media (max-width: 768px) {
+    .chart-container {
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+
+
+.chart-container:hover {
+    transform: scale(1.05);
+}
+
+.chart-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+canvas {
+    width: 100%;
+    height: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .sidebar .logo {
+        font-size: 1.2rem;
+    }
+
+    .sidebar ul {
+        display: flex;
+    }
+
+    .sidebar ul li {
+        margin: 0 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .weather-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .weather-summary {
+        max-width: 100%;
+    }
+
+    #charts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-output {
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#chat-submit-btn {
+    padding: 10px 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#chat-submit-btn:hover {
+    background-color: #ff4b4b;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i> Weather App
+            </div>
+            <ul>
+                <li><a href="#dashboard" id="nav-dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#forecast" id="nav-forecast"><i class="fas fa-table"></i> Forecast</a></li>
+                <li><a href="#charts" id="nav-charts"><i class="fas fa-chart-line"></i> Charts</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Section -->
+            <section class="weather-info" id="dashboard">
+                <nav class="top-bar">
+                    <div class="search-bar">
+                        <input type="text" id="cityInput" placeholder="Enter city name">
+                        <button id="getWeatherBtn"><i class="fas fa-search"></i> Get Weather</button>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/40" alt="User Profile">
+                    </div>
+                </nav>
+
+                <div class="weather-summary">
+                    <h2 id="cityName">City</h2>
+                    <p id="temperature">Temperature: -- °C</p>
+                    <p id="humidity">Humidity: --%</p>
+                    <p id="windSpeed">Wind Speed: -- km/h</p>
+                    <p id="weatherDesc">Weather: --</p>
+                </div>
+                <div class="weather-icon">
+                    <img id="weatherIcon" src="" alt="Weather Icon">
+                </div>
+                
+                <!-- Chatbot Section -->
+                <div class="chatbot-container">
+                    <h2>Chatbot Assistant</h2>
+                    <div id="chat-output" class="chat-output"></div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Ask something...">
+                        <button id="chat-submit-btn">Submit</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forecast Section -->
+            <section id="forecast" class="hidden">
+                <h2>5-Day Weather Forecast</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weather-table-body">
+                        <!-- Weather data rows will be inserted dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Charts Section -->
+            <section id="charts" class="hidden">
+                <div class="chart-container">
+                    <h2>Temperature Variation</h2>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Weather Distribution</h2>
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Temperature Trend</h2>
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./newScript.js"></script>
+</body>
+</html>

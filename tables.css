@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #city-input {
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  /* Table Section */
+  .table-section {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Chatbot Section */
+  .chatbot-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .chatbot-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #chat-output {
+    height: 150px;
+    overflow-y: auto;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  #chat-input {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  #chat-submit-btn {
+    padding: 10px 20px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
